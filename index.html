@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fun Future Predictor</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #f4eaff,
+                #e8f5ff,
+                #fff0f7
+            );
+
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+
+            background: rgba(255,255,255,0.95);
+
+            padding: 35px;
+
+            border-radius: 30px;
+
+            box-shadow: 0 10px 35px rgba(80,60,100,0.18);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .magic {
+            font-size: 65px;
+        }
+
+        h1 {
+            color: #7651a8;
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .section-title {
+            color: #7651a8;
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .input-box {
+            background: #faf7ff;
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid #eee;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 12px;
+
+            border: 1px solid #ddd;
+            border-radius: 10px;
+
+            background: white;
+            font-size: 14px;
+        }
+
+        .button {
+            display: block;
+
+            width: 100%;
+
+            margin-top: 30px;
+
+            padding: 16px;
+
+            text-align: center;
+
+            background: linear-gradient(
+                90deg,
+                #8b5fc7,
+                #bd82d9
+            );
+
+            color: white;
+
+            border-radius: 15px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(120,80,160,0.25);
+        }
+
+        .prediction {
+            margin-top: 35px;
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            background: linear-gradient(
+                135deg,
+                #f8efff,
+                #edf8ff
+            );
+
+            border: 2px solid #eee;
+        }
+
+        .prediction h2 {
+            text-align: center;
+            color: #7651a8;
+            margin-bottom: 20px;
+        }
+
+        .prediction-card {
+            background: white;
+
+            padding: 18px;
+
+            margin: 12px 0;
+
+            border-radius: 15px;
+
+            box-shadow: 0 4px 12px rgba(100,80,120,0.08);
+
+            line-height: 1.6;
+        }
+
+        .prediction-card strong {
+            color: #7651a8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                padding: 22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div class="magic">🔮</div>
+
+            <h1>Fun Future Predictor</h1>
+
+            <p class="subtitle">
+                Discover your fun and fictional future vibe! ✨
+            </p>
+
+        </div>
+
+
+        <!-- PREFERENCES -->
+
+        <h2 class="section-title">
+            ✨ Tell Us About Yourself
+        </h2>
+
+
+        <div class="form-grid">
+
+            <!-- MOOD -->
+
+            <div class="input-box">
+
+                <label>😊 Current Mood</label>
+
+                <select>
+
+                    <option>Select Mood</option>
+                    <option>Happy 😄</option>
+                    <option>Calm 😌</option>
+                    <option>Energetic ⚡</option>
+                    <option>Chill 😎</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- COLOR -->
+
+            <div class="input-box">
+
+                <label>🎨 Favorite Color</label>
+
+                <select>
+
+                    <option>Select Color</option>
+                    <option>Red ❤️</option>
+                    <option>Blue 💙</option>
+                    <option>Green 💚</option>
+                    <option>Yellow 💛</option>
+                    <option>Purple 💜</option>
+                    <option>Pink 🩷</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- MUSIC -->
+
+            <div class="input-box">
+
+                <label>🎵 Favorite Music</label>
+
+                <select>
+
+                    <option>Select Music</option>
+                    <option>Pop 🎤</option>
+                    <option>Lo-fi 🎧</option>
+                    <option>Rock 🎸</option>
+                    <option>Classical 🎻</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- WEATHER -->
+
+            <div class="input-box">
+
+                <label>🌤️ Favorite Weather</label>
+
+                <select>
+
+                    <option>Select Weather</option>
+                    <option>Sunny ☀️</option>
+                    <option>Rainy 🌧️</option>
+                    <option>Cloudy ☁️</option>
+                    <option>Winter ❄️</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ANIMAL -->
+
+            <div class="input-box">
+
+                <label>🐾 Favorite Animal</label>
+
+                <select>
+
+                    <option>Select Animal</option>
+                    <option>Cat 🐱</option>
+                    <option>Dog 🐶</option>
+                    <option>Butterfly 🦋</option>
+                    <option>Lion 🦁</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SEASON -->
+
+            <div class="input-box">
+
+                <label>🌸 Favorite Season</label>
+
+                <select>
+
+                    <option>Select Season</option>
+                    <option>Summer ☀️</option>
+                    <option>Winter ❄️</option>
+                    <option>Monsoon 🌧️</option>
+                    <option>Spring 🌸</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- LUCKY NUMBER -->
+
+        <h2 class="section-title">
+            🍀 Choose Your Lucky Number
+        </h2>
+
+        <div class="input-box">
+
+            <input
+                type="number"
+                min="1"
+                max="99"
+                placeholder="Enter a number from 1 to 99"
+            >
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <a href="#prediction" class="button">
+            🔮 Reveal My Future ✨
+        </a>
+
+
+        <!-- PREDICTION -->
+
+        <div class="prediction" id="prediction">
+
+            <h2>
+                🌟 Your Fun Future Prediction 🌟
+            </h2>
+
+
+            <div class="prediction-card">
+
+                ✈️ <strong>Adventure:</strong>
+
+                <br>
+
+                An exciting experience may be waiting
+                for you. Keep exploring and trying
+                something new!
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                🎯 <strong>Opportunity:</strong>
+
+                <br>
+
+                A new opportunity could appear when
+                you least expect it. Stay curious!
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                💫 <strong>Future Vibe:</strong>
+
+                <br>
+
+                Explorer & Dreamer 🌈
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                🍀 <strong>Lucky Message:</strong>
+
+                <br>
+
+                Believe in yourself and enjoy every
+                little moment!
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                ⭐ <strong>Lucky Number:</strong>
+
+                <br>
+
+                7
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+
+            🔮 Fun Future Predictor | FCIP Mini Project
+
+            <br><br>
+
+            This website provides fictional predictions
+            for entertainment only. ✨
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
